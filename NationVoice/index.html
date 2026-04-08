@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NationVoice | Clean India, Driven by Citizens</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+  
+  <header class="glass-nav">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-3H8v3H6v-7h2V8h4v1.5h2v7h-3z"></path>
+        </svg>
+        NationVoice
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <!-- Filled dynamically by main.js -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero text-center mb-4">
+      <div class="container animate-fade-in" style="max-width: 800px; padding: 2rem 0;">
+        <h1>Let's Make India <br/> Clean & Green Together.</h1>
+        <p class="mt-1" style="font-size: 1.25rem;">NationVoice empowers citizens to report civic issues instantly. From uncollected garbage to road potholes, be the voice of change in your community.</p>
+        <div class="hero-buttons mt-2" style="margin-bottom: 2rem;">
+          <a href="/register.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Report an Issue</a>
+          <a href="/track.html" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">Track Status</a>
+        </div>
+        <img src="/src/dustbin.jpg" alt="Clean India" style="width: 100%; height: 450px; object-fit: cover; border-radius: 16px; margin-top: 2rem; box-shadow: var(--glass-shadow);">
+      </div>
+    </section>
+
+    <section class="container mt-4 mb-4 text-center">
+      <h2>How NationVoice Works</h2>
+      <p>A simple three-step process to ensure transparency and rapid resolution.</p>
+      
+      <div class="grid-3 animate-fade-in" style="animation-delay: 0.2s;">
+        <div class="card glass">
+          <div class="card-icon">📸</div>
+          <h3>1. Snap & Report</h3>
+          <p>See a problem? Take a photo, write a brief description, and choose the correct category (e.g. Garbage, Roads).</p>
+        </div>
+        <div class="card glass">
+          <div class="card-icon">🔍</div>
+          <h3>2. Get Tracking ID</h3>
+          <p>You automatically receive a unique Complaint ID to monitor real-time progress on our portal.</p>
+        </div>
+        <div class="card glass">
+          <div class="card-icon">✅</div>
+          <h3>3. Action Taken</h3>
+          <p>Local authorities review the issue and update the status from 'Pending' to 'Resolved' upon completion.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo mb-1" style="color: var(--text);">
+          NationVoice
+        </div>
+        <p style="font-size: 0.9rem;">Building cleaner, better communities through transparent communication and swift civic action.</p>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About Mission</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="/register.html">Report Issue</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Portal</h3>
+        <ul class="footer-links">
+          <li><a href="/track.html">Track Complaint</a></li>
+          <li><a href="/login.html">Citizen Login</a></li>
+          <li><a href="/admin.html">Admin Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container text-center mt-1">
+      <p style="font-size: 0.85rem;">
+  &copy; 2026 NationVoice - Digital India Initiative. 
+  Developed by Vishbjeet Raj
+</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

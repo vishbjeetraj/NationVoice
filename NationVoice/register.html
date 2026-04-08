@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Join NationVoice</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+  
+  <header class="glass-nav">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-3H8v3H6v-7h2V8h4v1.5h2v7h-3z"></path>
+        </svg>
+        NationVoice
+      </a>
+      <nav>
+        <ul class="nav-links"></ul> 
+      </nav>
+    </div>
+  </header>
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+    <div class="glass animate-fade-in" style="width: 100%; max-width: 450px; padding: 2.5rem;">
+      <h2 class="text-center mb-1">Join the Movement</h2>
+      <p class="text-center" style="margin-bottom: 2rem;">Create your citizen account to start reporting issues.</p>
+      
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Ramesh Kumar" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="ramesh@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="••••••••" required minlength="4">
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" class="form-control" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-full" style="padding: 1rem; margin-top: 1rem;">Create Account</button>
+      </form>
+      
+      <div class="mt-2 text-center" style="font-size: 0.95rem;">
+        <p>Already have an account? <a href="/login.html" style="color: var(--primary); font-weight: 600;">Log in</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/register.js"></script>
+</body>
+</html>

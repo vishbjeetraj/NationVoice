@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dashboard | NationVoice</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+  
+  <header class="glass-nav">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-3H8v3H6v-7h2V8h4v1.5h2v7h-3z"></path>
+        </svg>
+        NationVoice
+      </a>
+      <nav>
+        <ul class="nav-links"></ul> 
+      </nav>
+    </div>
+  </header>
+
+  <main style="flex: 1; padding: 2rem 0;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h2>Welcome, <span id="userNameDisplay">Citizen</span></h2>
+          <p style="margin: 0;">Here you can file new reports and check the status of your past reports.</p>
+        </div>
+      </div>
+
+      <div class="grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem;">
+        
+        <!-- Left: Form -->
+        <div class="glass" style="padding: 2rem; height: fit-content;">
+          <h3>File a New Complaint</h3>
+          <form id="complaintForm" class="mt-1">
+            <div class="form-group">
+              <label for="cTitle">Complaint Title</label>
+              <input type="text" id="cTitle" class="form-control" placeholder="e.g. Overflowing dump near station" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="cCategory">Category</label>
+              <select id="cCategory" class="form-control" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Garbage">Garbage & Waste</option>
+                <option value="Pollution">Air/Noise Pollution</option>
+                <option value="Roads">Potholes & Roads</option>
+                <option value="Water">Water & Drainage</option>
+                <option value="Electricity">Electricity & Streetlights</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="cLocation">Incident Location</label>
+              <input type="text" id="cLocation" class="form-control" placeholder="e.g. MG Road, Sector 14" required>
+            </div>
+
+            <div class="form-group">
+              <label for="cDescription">Description</label>
+              <textarea id="cDescription" class="form-control" placeholder="Provide complete details..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Upload Image (Optional)</label>
+              <div class="file-upload">
+                <div class="file-upload-btn">
+                  <span style="font-size: 2rem;">📷</span>
+                  <p class="mt-1">Click to browse or drag image here</p>
+                </div>
+                <input type="file" id="cImage" accept="image/*">
+              </div>
+              <img id="imagePreview" class="image-preview" src="" alt="Preview">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full" style="padding: 1rem; font-size: 1.1rem;">Submit Complaint</button>
+          </form>
+        </div>
+
+        <!-- Right: List -->
+        <div class="glass" style="padding: 2rem;">
+          <h3>Your Recent Complaints</h3>
+          
+          <div class="table-container" id="complaintsTableContainer">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/dashboard.js"></script>
+</body>
+</html>

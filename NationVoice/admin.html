@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | NationVoice</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+  
+  <header class="glass-nav">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <span style="color: var(--primary);">🛡️</span>
+        NationVoice Admin
+      </a>
+      <nav>
+        <ul class="nav-links"></ul> 
+      </nav>
+    </div>
+  </header>
+
+  <main style="flex: 1; padding: 2rem 0;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h2>Administration Panel</h2>
+          <p style="margin: 0;">Manage and track all citizen complaints here.</p>
+        </div>
+      </div>
+
+      <div class="glass" style="padding: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3>All Complaints</h3>
+          <div>
+            <select id="filterStatus" class="form-control" style="width: auto; display: inline-block;">
+              <option value="All">All Statuses</option>
+              <option value="Pending">Pending</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Resolved">Resolved</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="table-container" id="adminTableContainer">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/admin.js"></script>
+</body>
+</html>
